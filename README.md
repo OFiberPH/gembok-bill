@@ -11,40 +11,40 @@
   [![GitHub Stars](https://img.shields.io/github/stars/alijayanet/gembok-bill?style=for-the-badge)](https://github.com/alijayanet/gembok-bill/stargazers)
 </div>
 
-## 🌐 Tentang Gembok Bill
+## 🌐 About Gembok Bill
 
-**Gembok Bill** adalah sistem manajemen ISP terintegrasi yang dirancang untuk mengelola billing, layanan pelanggan, dan operasi jaringan melalui integrasi WhatsApp. Sistem ini menyediakan solusi end-to-end untuk manajemen penyedia layanan internet dengan fitur-fitur canggih.
+**Gembok Bill** is an integrated ISP management system designed to handle billing, customer service, and network operations through WhatsApp integration. This system provides an end-to-end solution for Internet Service Provider management with advanced features.
 
-### 🚀 Fitur Utama
+### 🚀 Key Features
 
-- **📱 WhatsApp Gateway**: Interaksi pelanggan, pengiriman voucher, pelaporan gangguan, dan notifikasi otomatis
-- **📡 Integrasi GenieACS**: Manajemen CPE (Customer Premises Equipment) yang terpusat
-- **🔗 Manajemen Mikrotik PPPoE & Hotspot**: Autentikasi pengguna dan kontrol bandwidth real-time
-- **💳 Sistem Billing**: Pembuatan invoice otomatis, pelacakan pembayaran, dan remittance
-- **👥 Manajemen Agen & Teknisi**: Peran, kontrol akses, dan penugasan pekerjaan yang fleksibel
-- **📂 Migrasi Database**: Pembaruan skema berbasis SQL untuk pengembangan yang berkelanjutan
-- **🗺️ Pemetaan Jaringan Kabel**: Manajemen ODP, tiang, dan tata letak kabel secara visual
+- **📱 WhatsApp Gateway**: Customer interaction, voucher distribution, issue reporting, and automatic notifications
+- **📡 GenieACS Integration**: Centralized CPE (Customer Premises Equipment) management
+- **🔗 Mikrotik PPPoE & Hotspot Management**: User authentication and real-time bandwidth control
+- **💳 Billing System**: Automatic invoice generation, payment tracking, and remittance
+- **👥 Agent & Technician Management**: Role-based access control and flexible task assignment
+- **📂 Database Migration**: SQL-based schema updates for continuous development
+- **🗺️ Cable Network Mapping**: Visual management of ODPs, poles, and cable layouts
 
-## 🛠️ Teknologi yang Digunakan
+## 🛠️ Technologies Used
 
-| Kategori | Teknologi |
-|----------|-----------|
+| Category | Technology |
+|----------|-------------|
 | **Backend** | Node.js, Express |
 | **Database** | SQLite (development), MySQL (production) |
 | **Frontend** | EJS, HTML5, CSS3, JavaScript |
 | **WhatsApp** | [@whiskeysockets/baileys](https://github.com/WhiskeySockets/Baileys) |
-| **Network** | Node-routeros untuk Mikrotik |
+| **Network** | Node-routeros for Mikrotik |
 | **Payment** | Midtrans, Xendit |
 | **Logging** | Winston, Pino |
 
-## 📋 Prasyarat Sistem
+## 📋 System Requirements
 
 - **Node.js** >= 20.0.0
 - **npm** >= 6.0.0
-- **Database** SQLite (untuk development) atau MySQL (untuk production)
-- **Akses WhatsApp Business** (untuk fitur WhatsApp Gateway)
+- **Database** SQLite (for development) or MySQL (for production)
+- **WhatsApp Business Access** (for WhatsApp Gateway features)
 
-## 🚀 Instalasi Cepat
+## 🚀 Quick Installation
 
 ### 1. Clone Repository
 ```bash
@@ -54,94 +54,93 @@ git clone https://github.com/alijayanet/gembok-bill.git
 cd gembok-bill
 ```
 
-### 2. Instal Dependensi
+### 2. Install Dependencies
 ```bash
 npm install
 ```
 
-### 3. Inisialisasi Database
+### 3. Initialize Database
 ```bash
 npm run setup
 ```
 
-### 5. Jalankan Aplikasi
+### 5. Run the Application
 ```bash
-# Untuk production
+# For production
 npm start
 ```
-# Untuk development
+# For development
 ```bash
 npm run dev
 ```
 
-## 📁 Struktur Project
+## 📁 Project Structure
 
 ```
 gembok-bill/
-├── app.js                  # Entry point aplikasi
-├── package.json            # Dependensi dan script
-├── config/                 # File konfigurasi
-├── data/                   # File database dan backup
-├── migrations/             # File migrasi database
-├── public/                 # File statis (CSS, JS, images)
-├── routes/                 # Endpoint API
-├── scripts/                # Script utilitas
-├── utils/                  # Fungsi utilitas
-└── views/                  # Template EJS
+├── app.js                  # Application entry point
+├── package.json            # Dependencies and scripts
+├── config/                 # Configuration files
+├── data/                   # Database and backups
+├── migrations/             # Database migration files
+├── public/                 # Static files (CSS, JS, images)
+├── routes/                 # API endpoints
+├── scripts/                # Utility scripts
+├── utils/                  # Utility functions
+└── views/                  # EJS templates
 ```
 
-## 📖 Dokumentasi Lengkap
+## 📖 Complete Documentation
 
-| Dokumen | Deskripsi |
+| Document | Description |
 |---------|-----------|
-| [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md) | Panduan lengkap deployment di server baru |
-| [DATA_README.md](DATA_README.md) | Informasi tentang manajemen data |
-| [WHATSAPP_SETUP.md](WHATSAPP_SETUP.md) | Konfigurasi WhatsApp Gateway |
-| [WHATSAPP_FIX_SUMMARY.md](WHATSAPP_FIX_SUMMARY.md) | Ringkasan perbaikan WhatsApp |
+| [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md) | Complete deployment guide for new servers |
+| [DATA_README.md](DATA_README.md) | Information about data management |
+| [WHATSAPP_SETUP.md](WHATSAPP_SETUP.md) | WhatsApp Gateway configuration |
+| [WHATSAPP_FIX_SUMMARY.md](WHATSAPP_FIX_SUMMARY.md) | Summary of WhatsApp fixes |
 
-## 🎯 Cara Kontribusi
+## 🎯 How to Contribute
 
-Kami menyambut kontribusi dari komunitas! Berikut cara berkontribusi:
+We welcome contributions from the community! Here’s how you can contribute:
 
-1. **Fork** repository ini
-2. Buat **branch fitur** (`git checkout -b feature/AmazingFeature`)
-3. **Commit** perubahan (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** ke branch (`git push origin feature/AmazingFeature`)
-5. Buka **Pull Request**
+1. **Fork** this repository
+2. Create a **feature branch** (`git checkout -b feature/AmazingFeature`)
+3. **Commit** changes (`git commit -m 'Add some AmazingFeature'`)
+4. **Push** to the branch (`git push origin feature/AmazingFeature`)
+5. Open a **Pull Request**
 
-### Panduan Kontribusi
-- Ikuti gaya kode yang sudah ada
-- Tambahkan dokumentasi untuk fitur baru
-- Pastikan semua test berjalan dengan baik
-- Perbarui README jika diperlukan
+### Contribution Guidelines
+- Follow the existing code style
+- Add documentation for new features
+- Make sure all tests pass successfully
+- Update README if necessary
 
-## 📞 Dukungan
+## 📞 Support
 
-Jika Anda memerlukan bantuan:
+If you need help:
 
-- Buat **issue** di [GitHub Issues](https://github.com/alijayanet/gembok-bill/issues)
-- Hubungi tim pengembang melalui email
-- Bergabung dengan komunitas Discord (jika tersedia)
+- Create an **issue** on [GitHub Issues](https://github.com/alijayanet/gembok-bill/issues)
+- Contact the development team via email
+- Join the Discord community (if available)
 
-## 📄 Lisensi
+## 📄 License
 
-Project ini dilisensikan di bawah lisensi ISC - lihat file [LICENSE](LICENSE) untuk detail lebih lanjut.
+This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for more details.
 
-## 👥 Tim Pengembang
+## 👥 Development Team
 
 - **ALIJAYA Team** - [@alijayanet](https://github.com/alijayanet)
 
-## 🙏 Ucapan Terima Kasih
+## 🙏 Acknowledgements
 
-- Terima kasih kepada semua kontributor yang telah membantu pengembangan project ini
-- Komunitas open source yang memberikan inspirasi dan dukungan
+- Thanks to all contributors who supported the project’s development
+- The open-source community for inspiration and support
 
 ---
 <div align="center">
   
-  💻 Dikembangkan dengan ❤️ untuk komunitas ISP Indonesia
+  💻 Developed with ❤️ for the Indonesian ISP community
   
-  [Laporkan Bug](https://github.com/alijayanet/gembok-bill/issues) · [Minta Fitur](https://github.com/alijayanet/gembok-bill/issues) · [Dokumentasi](DEPLOYMENT_GUIDE.md)
+  [Report a Bug](https://github.com/alijayanet/gembok-bill/issues) · [Request a Feature](https://github.com/alijayanet/gembok-bill/issues) · [Documentation](DEPLOYMENT_GUIDE.md)
   
-
 </div>
